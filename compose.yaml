@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  smart-lab-pdf-reader:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    image: smart-lab-pdf-reader
+    container_name: smart-lab-pdf-reader
+    restart: unless-stopped
